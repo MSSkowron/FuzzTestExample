@@ -2,9 +2,12 @@ package fuzzing
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 )
+
+var ErrEmptyValuesArray = errors.New("empty values array")
 
 type ValuesRequest struct {
 	Values []int `json:"values"`
